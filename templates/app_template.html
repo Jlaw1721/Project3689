@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% block head %}
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      {% block styles %}
+        {{ bootstrap.load_css() }}
+      {% endblock %}
+      <title>Final Project </title>
+    {% endblock %}
+  </head>
+<body>
+  {% block content %}
+  <div class="page-header bg-primary">
+    <h1 style="color: white; padding: 15px"> Example Page Header </h1>
+  </div>
+
+    <div class="container mb-4">  
+      <div class="card mt-4">
+        <div class="card-body">
+          <h2 class="card-title">Check For Cheap Gas</h2>
+          <form action="/testAction">
+          <select class="form-select" aria-label="Select Gas Type">
+            <option selected> Choose Gas Type </option>
+            <option value="regular">Regular</option>
+            <option value="premium">Premium</option>
+            <option value="mid-grade">Mid-Grade</option>
+            <option value="diesel">Diesel</option>
+          </select>
+          <br>
+          <input type="text" placeholder="Enter zip code">
+          <button> Search </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  {% endblock %}
+</body>
+</html>
