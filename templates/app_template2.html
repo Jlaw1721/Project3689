@@ -23,10 +23,13 @@
       Store Name
     </div>
     <div class="card-body">
+      <p class="card-text">{{gasType}}</p>
       <h5 class="card-title">Gas Price</h5>
       <p class="card-text">Address</p>
+      <p class="card-text">{{zipNew[-1]}}</p>
       <a href="#" class="btn btn-primary">View Location</a>
-    </div>
+      </div>
+      <a href="{{ url_for('index') }}" class="card-link">Take me home</a>
   </div>
   {% endblock %}
 </body>

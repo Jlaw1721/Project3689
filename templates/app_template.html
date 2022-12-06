@@ -13,28 +13,46 @@
 <body>
   {% block content %}
   <div class="page-header bg-primary">
-    <h1 style="color: white; padding: 15px"> Example Page Header </h1>
+    <h1 style="color: white; padding: 15px"> Gas Prices Near You </h1>
   </div>
 
     <div class="container mb-4">  
       <div class="card mt-4">
         <div class="card-body">
           <h2 class="card-title">Check For Cheap Gas</h2>
-          <form action="/testAction">
-          <select class="form-select" aria-label="Select Gas Type">
+          <form action="/testAction" method = "POST">
+          <select name = 'selector' class="form-select" aria-label="Select Gas Type">
             <option selected> Choose Gas Type </option>
             <option value="regular">Regular</option>
             <option value="premium">Premium</option>
             <option value="mid-grade">Mid-Grade</option>
             <option value="diesel">Diesel</option>
           </select>
-          <br>
-          <input type="text" placeholder="Enter zip code">
-          <button> Search </button>
+          
+          <!-- this block of code gets gas type but not zip code: -->
+          <!-- {{ form.csrf_token }}
+          {{ form.song_title.label }}
+          {{ form.song_title(size=32) }}
+          <input type="submit" value="Submit"> -->
+
+          <!-- <br>           -->
+          <!-- <input type="text" placeholder="Enter zip code"> -->
+          <!-- <button> Search </button> -->
           </form>
         </div>
       </div>
     </div>
+    <div class="container mb-4">  
+    <div class="card mt-4">
+      <!-- this block of code the zip code works but the gas type doesnt  send info: -->
+  <form method="POST" action="">
+    {{ form.csrf_token }}
+    {{ form.song_title.label }}
+    {{ form.song_title(size=32) }}
+    <input type="submit" value="Submit">
+  </form>
+
   {% endblock %}
+  
 </body>
 </html>
