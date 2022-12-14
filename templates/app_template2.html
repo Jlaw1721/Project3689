@@ -13,24 +13,27 @@
 <body>
   {% block content %}
   <div class="page-header bg-primary">
-    <h1 style="color: white; padding: 15px" > Example Page Header </h1>
+    <h1 style="color: white; padding: 15px" > Final Project </h1>
   </div>
   <br><br>
   <h2 style="text-align: center;"> Results </h2>
+  <a href="{{ url_for('index') }}" style="text-align: center">Take me home</a>
   <br><br>
-  <div class="card">
-    <div class="card-header">
-      Store Name
-    </div>
-    <div class="card-body">
-      <p class="card-text">{{gasType}}</p>
-      <h5 class="card-title">Gas Price</h5>
-      <p class="card-text">Address</p>
-      <p class="card-text">{{zipNew[-1]}}</p>
-      <a href="#" class="btn btn-primary">View Location</a>
+  {%for i in range(0, len)%}
+    <div class="card">
+      <div class="card-header">
+        {{names[i]}}
       </div>
-      <a href="{{ url_for('index') }}" class="card-link">Take me home</a>
-  </div>
+      <div class="card-body">
+        <!-- <p class="card-text">{{gasType}}</p> -->
+        <h5 class="card-title">${{prices[i]}}</h5>
+        <p class="card-text">{{addresses[i]}}</p>
+        <!-- <p class="card-text">{{zipNew}}</p> -->
+        <a href="#" class="btn btn-primary">View Location</a>
+        </div>
+    </div>
+    <br><br>
+  {%endfor%}
   {% endblock %}
 </body>
 </html>

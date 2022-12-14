@@ -7,50 +7,38 @@
       {% block styles %}
         {{ bootstrap.load_css() }}
       {% endblock %}
-      <title>Final Project </title>
+      <title> Final Project </title>
     {% endblock %}
   </head>
 <body>
   {% block content %}
   <div class="page-header bg-primary">
-    <h1 style="color: white; padding: 15px"> Gas Prices Near You </h1>
+    <h1 style="color: white; padding: 15px"> Final Project </h1>
   </div>
-
+    <br><br>
     <div class="container mb-4">  
       <div class="card mt-4">
         <div class="card-body">
           <h2 class="card-title">Check For Cheap Gas</h2>
-          <form action="/testAction" method = "POST">
-          <select name = 'selector' class="form-select" aria-label="Select Gas Type">
-            <option selected> Choose Gas Type </option>
-            <option value="regular">Regular</option>
-            <option value="premium">Premium</option>
-            <option value="mid-grade">Mid-Grade</option>
-            <option value="diesel">Diesel</option>
-          </select>
-          
-          <!-- this block of code gets gas type but not zip code: -->
-          <!-- {{ form.csrf_token }}
-          {{ form.song_title.label }}
-          {{ form.song_title(size=32) }}
-          <input type="submit" value="Submit"> -->
-
-          <!-- <br>           -->
-          <!-- <input type="text" placeholder="Enter zip code"> -->
-          <!-- <button> Search </button> -->
+          <br>
+          <br>
+          <form method="POST" action="">
+            {{ form.csrf_token }}
+            {{ form.gas.label }}
+            {{ form.gas }}
+            <br>
+            <br>
+            {{ form.zips.label }}
+            {{ form.zips(size=32) }}
+            <br>
+            <br>
+            <input type="submit" value="Submit">
           </form>
+          
+         
         </div>
       </div>
     </div>
-    <div class="container mb-4">  
-    <div class="card mt-4">
-      <!-- this block of code the zip code works but the gas type doesnt  send info: -->
-  <form method="POST" action="">
-    {{ form.csrf_token }}
-    {{ form.song_title.label }}
-    {{ form.song_title(size=32) }}
-    <input type="submit" value="Submit">
-  </form>
 
   {% endblock %}
   
