@@ -14,6 +14,7 @@
     - Flask 
     - Bootsrap
     - WTForms 
+    - Beautiful Soup
   - Run Command "flask --app finalProject --debug run"
 
   - Link to GitHub: https://github.com/Jlaw1721/Project3689.git
