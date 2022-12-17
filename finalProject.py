@@ -1,3 +1,15 @@
+# Course: CST205-01
+# Title: Otter Cheap Gas Finder
+# Authors: Joshua Lawson, Diego Zavala, Ethan Bleier, Miki Iitsuka
+# Date: 12-16-2022
+# Abstract: This site allows users to search for gas stations depending on gas type and location.
+# Workload: Basic structure and functionality of py file and templates - Joshua Lawson
+#           Demos, testing, README file, and help with implementation of templates- Diego Zavala
+#           Requirements file and miscellaneous tasks - Ethan Bleier
+# website used for data: autoblog.com
+# Github link:  https://github.com/Jlaw1721/Project3689.git
+
+
 from flask import Flask, render_template, flash, redirect, request
 from flask_bootstrap import Bootstrap5
 from flask_wtf import FlaskForm

@@ -1,7 +1,7 @@
   # CST 205 Multimedia Design and Programming 
   ### Project Group 3689
   ### 12/16/2022
-  # Otter Gas Finder 🦦⛽
+  # Otter Gas Price Finder 🦦⛽
   ### Team Members: 
   - Joshua Lawson 
   - Diego Zavala 
