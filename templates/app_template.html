@@ -1,3 +1,4 @@
+<!-- this template serves as the home page and form entry page. -->
 <!doctype html>
 <html lang="en">
   <head>
@@ -7,13 +8,24 @@
       {% block styles %}
         {{ bootstrap.load_css() }}
       {% endblock %}
+
+      <style>
+        body {
+          background-image: url(https://imageio.forbes.com/specials-images/imageserve/6060f8b5b0d4032713a5f74f/0x0.jpg?format=jpg&width=1200);
+          background-size: cover;
+        }
+        h1 {
+          text-align: center
+        }
+      </style>
+
       <title> Final Project </title>
     {% endblock %}
   </head>
 <body>
   {% block content %}
   <div class="page-header bg-primary">
-    <h1 style="color: white; padding: 15px"> Final Project </h1>
+    <h1 style="color: white; padding: 15px"> Gas Price Finder </h1>
   </div>
     <br><br>
     <div class="container mb-4">  

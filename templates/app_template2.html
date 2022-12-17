@@ -1,3 +1,4 @@
+<!-- this template is used as the display page for the retrieved information -->
 <!doctype html>
 <html lang="en">
   <head>
@@ -7,13 +8,25 @@
       {% block styles %}
         {{ bootstrap.load_css() }}
       {% endblock %}
+      <style>
+        body {
+          background-image: url(https://imageio.forbes.com/specials-images/imageserve/6060f8b5b0d4032713a5f74f/0x0.jpg?format=jpg&width=1200);
+          background-size: cover;
+        }
+        h1 {
+          text-align: center;
+        }
+        h2 {
+          color: blue;
+        }
+      </style>
       <title>Final Project </title>
     {% endblock %}
   </head>
 <body>
   {% block content %}
   <div class="page-header bg-primary">
-    <h1 style="color: white; padding: 15px" > Final Project </h1>
+    <h1 style="color: white; padding: 15px" > Gas Price Finder </h1>
   </div>
   <br><br>
   <h2 style="text-align: center;"> Results </h2>
@@ -25,11 +38,11 @@
         {{names[i]}}
       </div>
       <div class="card-body">
-        <!-- <p class="card-text">{{gasType}}</p> -->
+        
         <h5 class="card-title">${{prices[i]}}</h5>
         <p class="card-text">{{addresses[i]}}</p>
-        <!-- <p class="card-text">{{zipNew}}</p> -->
-        <a href="#" class="btn btn-primary">View Location</a>
+        
+        <p class="card-text">Distance: {{distances[i]}}</p>
         </div>
     </div>
     <br><br>
